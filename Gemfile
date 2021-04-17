@@ -11,7 +11,8 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
-
+# gem 'sinatra/flash', :require 'sinatra/flash'
+# flash is for error messages
 group :test do
   gem 'rspec'
   gem 'capybara'

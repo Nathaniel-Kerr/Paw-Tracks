@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<%=@user.name%>
+<html>
+    <h3>Add a pet</h3>
+    <form action="/pets/new" method="POST">
+	    <input type="text" name="name" placeholder="name:">
+        <input type="integer" name="age" placeholder="age:">
+	    <%# <input type="text" name="type" placeholder="type:"> %>
+        <input type="text" name="breed" placeholder="breed:">
+	    <input type="submit" value="Add Pet!">
+    </form>
+</html>

@@ -1,0 +1,12 @@
+<h1>Welcome, <%=@user.name%>!</h1><br>
+<h3>What would you like to do?</h3><br>
+<a href="/pets/new">Add a furry friend!</a><br>
+<a href="/sessions/logout">Log Out</a><br>
+<br>
+<h2>Your Pets</h2>
+
+    <% @pets.each do |pet| if pet.owner_id == @user.id %>
+    <h2><%= [pet.name,"age:", pet.age.to_s,"breed:", pet.breed].join(" ") %><a href="/pets/<%=pet.id%>/edit"> update pet</a><br><br></h2>
+        <%end%>
+    <%end%>
+    
