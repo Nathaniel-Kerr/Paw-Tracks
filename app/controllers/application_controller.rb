@@ -80,12 +80,11 @@ class ApplicationController < Sinatra::Base
   patch '/pets/:id' do
     id = params[:id]
     @pet = Pet.find(params[:id])
-    name = params[:name]
-    age = params[:age]
-    breed = params[:breed]
-    @pet.update(name)
-    @pet.update(age)
-    @pet.update(breed)
+  
+    @pet.update(params[:name])
+    @pet.update(params[:age])
+    @pet.update(params[:breed])
+    
     redirect '/users/home'
   end
 
