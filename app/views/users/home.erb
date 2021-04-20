@@ -6,7 +6,7 @@
 <h2>Your Pets</h2>
 
     <% @pets.each do |pet| if pet.owner_id == @user.id %>
-    <h2><%= [pet.name,"age:", pet.age.to_s,"breed:", pet.breed].join(" ") %><a href="/pets/<%=pet.id%>/edit"> update pet</a><br><br></h2>
+    <h2><%= [pet.name,"age:", pet.age.to_s,"breed:", pet.breed].join(" ") %><br><a href="/pets/<%=pet.id%>/edit"> update pet</a><br><br></h2>
         <%end%>
     <%end%>
     
