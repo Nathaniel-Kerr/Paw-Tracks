@@ -58,8 +58,8 @@ class ApplicationController < Sinatra::Base
     @user = User.find(session[:user_id])
 
     @pet = Pet.create(:name => params["name"], :age => params["age"], :breed => params["breed"])
-    if !@pet.owner_id
-      @pet.owner_id = @user.id
+    if !@pet.user_id
+      @pet.user_id = @user.id
       @pet.save
     end
     
